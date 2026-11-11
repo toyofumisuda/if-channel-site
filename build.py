@@ -4,10 +4,10 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 
 LOGO = '''<svg viewBox="0 0 40 40" aria-hidden="true">
-<polygon points="20,3 36,12 20,21 4,12" fill="#5cc8f0"/>
-<polygon points="4,12 20,21 20,38 4,29" fill="#1488bb"/>
-<polygon points="36,12 20,21 20,38 36,29" fill="#2c62c9"/>
-<text x="20" y="17" text-anchor="middle" font-size="10" font-weight="900" fill="#0e1a33" font-family="sans-serif">IF</text>
+<polygon points="20,3 36,12 20,21 4,12" fill="#e9a061"/>
+<polygon points="4,12 20,21 20,38 4,29" fill="#a8561c"/>
+<polygon points="36,12 20,21 20,38 36,29" fill="#c06a2a"/>
+<text x="20" y="17" text-anchor="middle" font-size="10" font-weight="900" fill="#3a2619" font-family="sans-serif">IF</text>
 </svg>'''
 
 PAGES = [
@@ -107,13 +107,13 @@ def flow_h():
     parts = ['<svg class="flow-svg flow-h" viewBox="0 0 1000 190" role="img" aria-label="制作の流れ：企画、計算、3D制作、チェック、公開">']
     for i, (n, t, s) in enumerate(STEPS):
         x = 20 + i * 196
-        fill = "#0e1a33" if i % 2 == 0 else "#1488bb"
+        fill = "#3a2619" if i % 2 == 0 else "#a8561c"
         parts.append(f'<rect x="{x}" y="30" width="160" height="130" rx="18" fill="{fill}"/>')
-        parts.append(f'<circle cx="{x+80}" cy="30" r="20" fill="#ffcf3f"/><text x="{x+80}" y="37" text-anchor="middle" font-size="20" font-weight="900" fill="#0e1a33">{n}</text>')
+        parts.append(f'<circle cx="{x+80}" cy="30" r="20" fill="#f3c98b"/><text x="{x+80}" y="37" text-anchor="middle" font-size="20" font-weight="900" fill="#3a2619">{n}</text>')
         parts.append(f'<text x="{x+80}" y="95" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">{t}</text>')
-        parts.append(f'<text x="{x+80}" y="128" text-anchor="middle" font-size="13" fill="#c8d5ec">{s}</text>')
+        parts.append(f'<text x="{x+80}" y="128" text-anchor="middle" font-size="13" fill="#f0dcc4">{s}</text>')
         if i < len(STEPS) - 1:
-            parts.append(f'<polygon points="{x+166},85 {x+190},95 {x+166},105" fill="#2bb3e8"/>')
+            parts.append(f'<polygon points="{x+166},85 {x+190},95 {x+166},105" fill="#d8843a"/>')
     parts.append("</svg>")
     return "".join(parts)
 
@@ -122,22 +122,22 @@ def flow_v():
     parts = ['<svg class="flow-svg flow-v" viewBox="0 0 320 560" role="img" aria-label="制作の流れ：企画、計算、3D制作、チェック、公開">']
     for i, (n, t, s) in enumerate(STEPS):
         y = 10 + i * 110
-        fill = "#0e1a33" if i % 2 == 0 else "#1488bb"
+        fill = "#3a2619" if i % 2 == 0 else "#a8561c"
         parts.append(f'<rect x="20" y="{y}" width="280" height="84" rx="16" fill="{fill}"/>')
-        parts.append(f'<circle cx="58" cy="{y+42}" r="20" fill="#ffcf3f"/><text x="58" y="{y+49}" text-anchor="middle" font-size="20" font-weight="900" fill="#0e1a33">{n}</text>')
+        parts.append(f'<circle cx="58" cy="{y+42}" r="20" fill="#f3c98b"/><text x="58" y="{y+49}" text-anchor="middle" font-size="20" font-weight="900" fill="#3a2619">{n}</text>')
         parts.append(f'<text x="94" y="{y+38}" font-size="22" font-weight="700" fill="#fff">{t}</text>')
-        parts.append(f'<text x="94" y="{y+64}" font-size="13" fill="#c8d5ec">{s}</text>')
+        parts.append(f'<text x="94" y="{y+64}" font-size="13" fill="#f0dcc4">{s}</text>')
         if i < len(STEPS) - 1:
-            parts.append(f'<polygon points="150,{y+90} 170,{y+90} 160,{y+104}" fill="#2bb3e8"/>')
+            parts.append(f'<polygon points="150,{y+90} 170,{y+90} 160,{y+104}" fill="#d8843a"/>')
     parts.append("</svg>")
     return "".join(parts)
 
 
 FLOW = f'<figure class="figure">{flow_h()}{flow_v()}<figcaption>図：If Channel の制作の流れ（自作）</figcaption></figure>'
 
-ICON_SHORT = '<svg class="icon" viewBox="0 0 48 48"><rect x="13" y="4" width="22" height="40" rx="5" fill="#0e1a33"/><polygon points="20,17 30,24 20,31" fill="#2bb3e8"/></svg>'
-ICON_EDU = '<svg class="icon" viewBox="0 0 48 48"><polygon points="24,6 46,17 24,28 2,17" fill="#0e1a33"/><path d="M11 22v10c0 4 26 4 26 0V22" fill="#2bb3e8"/></svg>'
-ICON_PR = '<svg class="icon" viewBox="0 0 48 48"><path d="M6 20h8l18-10v28L14 28H6z" fill="#0e1a33"/><path d="M36 17c4 3 4 11 0 14" stroke="#2bb3e8" stroke-width="4" fill="none" stroke-linecap="round"/></svg>'
+ICON_SHORT = '<svg class="icon" viewBox="0 0 48 48"><rect x="13" y="4" width="22" height="40" rx="5" fill="#3a2619"/><polygon points="20,17 30,24 20,31" fill="#d8843a"/></svg>'
+ICON_EDU = '<svg class="icon" viewBox="0 0 48 48"><polygon points="24,6 46,17 24,28 2,17" fill="#3a2619"/><path d="M11 22v10c0 4 26 4 26 0V22" fill="#d8843a"/></svg>'
+ICON_PR = '<svg class="icon" viewBox="0 0 48 48"><path d="M6 20h8l18-10v28L14 28H6z" fill="#3a2619"/><path d="M36 17c4 3 4 11 0 14" stroke="#d8843a" stroke-width="4" fill="none" stroke-linecap="round"/></svg>'
 
 # ---------- トップ ----------
 page("index.html", "トップ", "「もしも」を本物の物理で3Dにする、ショート動画スタジオ If Channel（講義課題の仮想企業）", f'''

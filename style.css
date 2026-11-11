@@ -1,15 +1,15 @@
 /* If Channel 仮想企業サイト（講義課題） */
 :root {
-  --navy: #0e1a33;
-  --navy-2: #172648;
-  --ink: #1d2433;
-  --muted: #5b6475;
-  --bg: #f6f8fc;
+  --navy: #3a2619;
+  --navy-2: #5a3a24;
+  --ink: #2e2117;
+  --muted: #6e5a4a;
+  --bg: #fbf5ec;
   --card: #ffffff;
-  --line: #dfe5f0;
-  --cyan: #2bb3e8;
-  --cyan-d: #1488bb;
-  --yellow: #ffcf3f;
+  --line: #ecdcc6;
+  --cyan: #d8843a;
+  --cyan-d: #a8561c;
+  --yellow: #f3c98b;
   --radius: 16px;
   --max: 1120px;
 }
@@ -34,7 +34,7 @@ p { margin: 0 0 1em; }
 /* 実習表示 */
 .notice {
   background: var(--yellow);
-  color: #3a2c00;
+  color: #3a2619;
   font-size: .85rem;
   text-align: center;
   padding: 6px 16px;
@@ -44,23 +44,23 @@ p { margin: 0 0 1em; }
 /* ヘッダー */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(14, 26, 51, .96);
+  background: rgba(58, 38, 25, .96);
   backdrop-filter: blur(6px);
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .logo { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; letter-spacing: .02em; }
 .logo svg { width: 34px; height: 34px; }
-.logo small { display: block; font-size: .65rem; color: #9fb3d6; font-weight: 400; line-height: 1.2; }
+.logo small { display: block; font-size: .65rem; color: #d9bd9c; font-weight: 400; line-height: 1.2; }
 .nav ul { list-style: none; display: flex; gap: 4px; margin: 0; padding: 0; align-items: center; }
-.nav a { color: #dce6f7; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-size: .95rem; }
+.nav a { color: #f4ead8; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-size: .95rem; }
 .nav a:hover, .nav a[aria-current="page"] { color: #fff; background: rgba(255,255,255,.1); }
-.nav a.nav-cta { background: var(--cyan); color: #04223a; font-weight: 700; margin-left: 6px; }
-.nav a.nav-cta:hover { background: #5cc8f0; }
+.nav a.nav-cta { background: var(--cyan); color: #2a1a10; font-weight: 700; margin-left: 6px; }
+.nav a.nav-cta:hover { background: #e9a061; }
 .menu-btn { display: none; background: none; border: 1px solid rgba(255,255,255,.3); color: #fff; border-radius: 8px; padding: 6px 12px; font-size: .9rem; cursor: pointer; }
 
 /* ヒーロー */
 .hero {
-  background: radial-gradient(circle at 80% 20%, #23417a 0, transparent 55%), var(--navy);
+  background: radial-gradient(circle at 80% 20%, #7a4a28 0, transparent 55%), var(--navy);
   color: #fff;
   padding: 72px 0 80px;
   overflow: hidden;
@@ -69,19 +69,19 @@ p { margin: 0 0 1em; }
 .eyebrow { display: inline-block; color: var(--yellow); font-weight: 700; font-size: .9rem; letter-spacing: .08em; margin-bottom: 12px; }
 .hero h1 { font-size: clamp(2rem, 5vw, 3.3rem); }
 .hero h1 em { font-style: normal; color: var(--cyan); }
-.hero p.lead { color: #c8d5ec; font-size: 1.05rem; max-width: 34em; }
+.hero p.lead { color: #f0dcc4; font-size: 1.05rem; max-width: 34em; }
 .hero-phones { display: flex; gap: 14px; justify-content: center; }
-.phone { width: 44%; max-width: 190px; border-radius: 22px; border: 6px solid #0a1224; box-shadow: 0 20px 40px rgba(0,0,0,.45); overflow: hidden; background: #000; }
+.phone { width: 44%; max-width: 190px; border-radius: 22px; border: 6px solid #2a1a10; box-shadow: 0 20px 40px rgba(0,0,0,.45); overflow: hidden; background: #000; }
 .phone:nth-child(2) { transform: translateY(28px); }
 .page-hero { background: var(--navy); color: #fff; padding: 52px 0 44px; }
-.page-hero p { color: #c8d5ec; margin: 0; }
+.page-hero p { color: #f0dcc4; margin: 0; }
 
 /* ボタン */
 .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .btn { display: inline-block; text-decoration: none; font-weight: 700; padding: 13px 26px; border-radius: 999px; border: 2px solid transparent; transition: transform .15s, background .15s; }
 .btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--cyan); color: #04223a; }
-.btn-primary:hover { background: #5cc8f0; }
+.btn-primary { background: var(--cyan); color: #2a1a10; }
+.btn-primary:hover { background: #e9a061; }
 .btn-ghost { border-color: rgba(255,255,255,.5); color: #fff; }
 .btn-dark { background: var(--navy); color: #fff; }
 
@@ -102,7 +102,7 @@ section { padding: 72px 0; }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: center; }
 .stat { background: var(--navy-2); color: #fff; border-radius: var(--radius); padding: 22px 10px; }
 .stat b { display: block; font-size: 2rem; color: var(--yellow); font-family: "Zen Kaku Gothic New", sans-serif; }
-.stat span { font-size: .85rem; color: #c8d5ec; }
+.stat span { font-size: .85rem; color: #f0dcc4; }
 
 /* 作品 */
 .works { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 20px; }
@@ -111,12 +111,12 @@ section { padding: 72px 0; }
 .work div { padding: 12px 14px; }
 .work h3 { font-size: .95rem; margin: 0 0 4px; }
 .work p { font-size: .8rem; color: var(--muted); margin: 0; }
-.tag { display: inline-block; font-size: .72rem; background: #e6f6fd; color: var(--cyan-d); border-radius: 999px; padding: 2px 10px; margin-bottom: 6px; font-weight: 700; }
+.tag { display: inline-block; font-size: .72rem; background: #fbe9d6; color: var(--cyan-d); border-radius: 999px; padding: 2px 10px; margin-bottom: 6px; font-weight: 700; }
 
 /* 表 */
 table.info { width: 100%; border-collapse: collapse; background: #fff; border-radius: var(--radius); overflow: hidden; }
 table.info th, table.info td { text-align: left; padding: 16px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
-table.info th { width: 28%; background: #f0f4fa; font-weight: 700; }
+table.info th { width: 28%; background: #f7ecdd; font-weight: 700; }
 
 .timeline { list-style: none; padding: 0; margin: 0; border-left: 3px solid var(--cyan); }
 .timeline li { padding: 0 0 22px 22px; position: relative; }
@@ -129,7 +129,7 @@ table.info th { width: 28%; background: #f0f4fa; font-weight: 700; }
 .price .yen small { font-size: .9rem; font-weight: 400; color: var(--muted); }
 .price ul { text-align: left; padding-left: 1.2em; color: var(--muted); font-size: .92rem; }
 .price.featured { border: 2px solid var(--cyan); }
-.price .badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--cyan); color: #04223a; font-size: .75rem; font-weight: 700; padding: 3px 14px; border-radius: 999px; }
+.price .badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--cyan); color: #2a1a10; font-size: .75rem; font-weight: 700; padding: 3px 14px; border-radius: 999px; }
 
 /* FAQ */
 details { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; }
@@ -147,20 +147,20 @@ form.contact { background: #fff; border: 1px solid var(--line); border-radius: v
 form.contact label { font-weight: 700; font-size: .92rem; display: grid; gap: 6px; }
 form.contact .req { color: #d23c3c; font-size: .75rem; margin-left: 6px; }
 form.contact input, form.contact select, form.contact textarea {
-  font: inherit; padding: 12px 14px; border: 1px solid #c7d0de; border-radius: 10px; background: #fbfcfe; width: 100%;
+  font: inherit; padding: 12px 14px; border: 1px solid #dcc7ad; border-radius: 10px; background: #fffcf7; width: 100%;
 }
-form.contact input:focus, form.contact select:focus, form.contact textarea:focus { outline: 3px solid rgba(43,179,232,.35); border-color: var(--cyan); }
+form.contact input:focus, form.contact select:focus, form.contact textarea:focus { outline: 3px solid rgba(216,132,58,.35); border-color: var(--cyan); }
 .form-msg { display: none; background: #e9f9ef; border: 1px solid #8fd6a8; color: #1d6b3a; padding: 14px 18px; border-radius: 10px; }
 .form-note { font-size: .82rem; color: var(--muted); }
 
 /* CTA帯 */
-.cta-band { background: linear-gradient(120deg, var(--cyan-d), #2c62c9); color: #fff; text-align: center; padding: 64px 0; }
-.cta-band p { color: #e3f1ff; }
+.cta-band { background: linear-gradient(120deg, var(--cyan-d), #c06a2a); color: #fff; text-align: center; padding: 64px 0; }
+.cta-band p { color: #fff1e2; }
 
 /* フッター */
-.site-footer { background: var(--navy); color: #9fb3d6; padding: 40px 0 28px; font-size: .88rem; }
+.site-footer { background: var(--navy); color: #d9bd9c; padding: 40px 0 28px; font-size: .88rem; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
-.site-footer a { color: #dce6f7; text-decoration: none; margin-right: 16px; }
+.site-footer a { color: #f4ead8; text-decoration: none; margin-right: 16px; }
 .site-footer .copy { width: 100%; border-top: 1px solid rgba(255,255,255,.1); padding-top: 16px; font-size: .78rem; }
 
 /* スマートフォン */
