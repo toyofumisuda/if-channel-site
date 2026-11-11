@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【実習】お問い合わせ｜If Channel（株式会社イフチャンネル）</title>
+<meta name="description" content="If Channel への制作のご相談・お問い合わせ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="notice">本サイトは講義課題として制作したものです。（実在しない仮想企業です）</p>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true">
+<polygon points="20,3 36,12 20,21 4,12" fill="#5cc8f0"/>
+<polygon points="4,12 20,21 20,38 4,29" fill="#1488bb"/>
+<polygon points="36,12 20,21 20,38 36,29" fill="#2c62c9"/>
+<text x="20" y="17" text-anchor="middle" font-size="10" font-weight="900" fill="#0e1a33" font-family="sans-serif">IF</text>
+</svg><span>If Channel<small>株式会社イフチャンネル</small></span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">メニュー</button>
+    <nav class="nav" id="nav"><ul><li><a href="index.html">トップ</a></li><li><a href="about.html">会社概要</a></li><li><a href="service.html">サービス</a></li><li><a href="works.html">作品</a></li><li><a class="nav-cta" href="contact.html" aria-current="page">お問い合わせ</a></li></ul></nav>
+  </div>
+</header>
+<main>
+
+<section class="page-hero"><div class="wrap"><span class="eyebrow">CONTACT</span><h1>お問い合わせ</h1><p>制作のご相談・お見積もりは、こちらのフォームからどうぞ。</p></div></section>
+
+<section>
+  <div class="wrap grid-2" style="align-items:start">
+    <div>
+      <div class="section-head"><span class="label">HOW IT WORKS</span><h2>ご相談の流れ</h2></div>
+      <ul class="timeline">
+        <li><b>1. フォームを送る</b><br>見たい「もしも」や目的を、ざっくりで大丈夫です。</li>
+        <li><b>2. 2営業日以内にご返信</b><br>企画のたたき台と料金の目安をお送りします。</li>
+        <li><b>3. オンラインで打ち合わせ</b><br>30分ほどで内容と公開日を決めます。</li>
+      </ul>
+      <p class="form-note">※本サイトは講義課題です。フォームは見本のため、送信しても内容はどこにも届きません。個人情報は入力しないでください。</p>
+    </div>
+    <form class="contact" id="contactForm">
+      <label>お名前<span class="req">必須</span><input type="text" name="name" required autocomplete="off" placeholder="例）山田 花子"></label>
+      <label>ご所属<input type="text" name="org" autocomplete="off" placeholder="例）〇〇中学校／〇〇株式会社"></label>
+      <label>ご相談の種類<span class="req">必須</span>
+        <select name="type" required><option value="">選んでください</option><option>教材動画の制作</option><option>PR動画の制作</option><option>チャンネルへの感想・テーマのリクエスト</option><option>その他</option></select></label>
+      <label>見てみたい「もしも」・ご相談内容<span class="req">必須</span><textarea name="msg" rows="5" required placeholder="例）もしも、教室の空気が5秒だけなくなったら？を授業で使いたい"></textarea></label>
+      <button class="btn btn-primary" type="submit" style="border:0;cursor:pointer;justify-self:start">内容を確認して送信</button>
+      <p class="form-msg" id="formMsg" role="status">ありがとうございます。（課題用の見本のため、実際には送信されていません）</p>
+    </form>
+  </div>
+</section>
+<script>
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();e.target.reset();document.getElementById('formMsg').style.display='block';});
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><b style="color:#fff">株式会社イフチャンネル（仮想企業）</b><br>「もしも」を3Dで見せる、物理シミュレーション動画スタジオ</div>
+    <div><a href="index.html">トップ</a><a href="about.html">会社概要</a><a href="service.html">サービス</a><a href="works.html">作品</a><a href="contact.html">お問い合わせ</a></div>
+    <p class="copy">本サイトは講義課題として制作したものです。掲載の会社・料金・実績は架空です。作品画像は制作者が自作した3D動画の画面です。<br>&copy; 2026 If Channel (practice)</p>
+  </div>
+</footer>
+<script>
+const b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'閉じる':'メニュー';});
+</script>
+</body>
+</html>
